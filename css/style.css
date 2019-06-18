@@ -1,0 +1,133 @@
+.wrapper {
+    perspective: 600px;
+    position: absolute;
+    left: 200px;
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 200px auto;
+    transform-style: preserve-3d;
+    animation: move 5s linear infinite;
+}
+
+.item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.item:nth-child(1) {
+    background: red;
+    transform: rotateY(60deg) translateZ(200px)
+}
+
+.item:nth-child(2) {
+    background: green;
+    transform: rotateY(120deg) translateZ(200px)
+}
+
+.item:nth-child(3) {
+    background: yellow;
+    transform: rotateY(180deg) translateZ(200px)
+}
+
+.item:nth-child(4) {
+    background: blue;
+    transform: rotateY(240deg) translateZ(200px)
+}
+
+.item:nth-child(5) {
+    background: black;
+    transform: rotateY(300deg) translateZ(200px)
+}
+
+.item:nth-child(6) {
+    background: orange;
+    transform: rotateY(360deg) translateZ(200px)
+}
+
+@keyframes move {
+    0% {
+        transform: rotateX(-30deg) rotateY(0)
+    }
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg)
+    }
+}
+
+.container {
+    perspective: 600px;
+    position: absolute;
+    right: 300px;
+}
+
+.room {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 200px auto;
+    transform-style: preserve-3d;
+    animation: dance 5s linear infinite;
+}
+
+.side {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.side:nth-child(1) {
+    background: red;
+    transform: translateZ(100px)
+}
+
+.side:nth-child(2) {
+    background: green;
+    transform: rotateX(90deg) translateZ(100px)
+}
+
+.side:nth-child(3) {
+    background: yellow;
+    transform: rotateX(180deg) translateZ(100px)
+}
+
+.side:nth-child(4) {
+    background: blue;
+    transform: rotateX(-90deg) translateZ(100px)
+}
+
+.side:nth-child(5) {
+    background: black;
+    transform: rotateY(90deg) translateZ(100px)
+}
+
+.side:nth-child(6) {
+    background: orange;
+    transform: rotateY(-90deg) translateZ(100px)
+}
+
+@keyframes dance {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg)
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg)
+    }
+}
